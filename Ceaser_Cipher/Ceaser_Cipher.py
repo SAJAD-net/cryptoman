@@ -1,7 +1,5 @@
 #!/usr/env python3
 
-import argparse
-
 
 ALPHA = "abcdefghijklmnopqrstuvwxyz"
 
@@ -33,22 +31,23 @@ def decrypt(cipher_text, shift):
 
 
 if __name__ == "__main__":
+    import argparse
+
     parser = argparse.ArgumentParser(description = "Ceaser Cipher")
     parser.add_argument('-e', '--encrypt', help = "To encrypt")
     parser.add_argument('-d', '--decrypt', help = "To decrypt")
     parser.add_argument('-s', '--shift', type = int, help = "The length to shift")
-    
+
     args = parser.parse_args()
 
-    if args.encrypt:
-        plain_text = args.encrypt
-        shift = args.shift
-        encrypt(plain_text, shift)
-   
-    elif args.decrypt:
-        cipher_text = args.decrypt
-        shift = args.shift
-        decrypt(cipher_text, shift)
+    if shift:=args.shift:
+        if plain_text:=args.encrypt:
+            encrypt(plain_text, shift)
 
+        elif cipher_text:=args.decrypt:
+            decrypt(cipher_text, shift)
+
+        else:
+            parser.print_help()
     else:
         parser.print_help()
