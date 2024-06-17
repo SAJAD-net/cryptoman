@@ -3,7 +3,7 @@
 import argparse
 
 
-ALPHA = "abcdefghijklmnopqrstuvwxyz"+"0123456789"
+ALPHA = "abcdefghijklmnopqrstuvwxyz"
 
 
 def encrypt(plain_text, shift):
