@@ -22,7 +22,7 @@ def decrypt(cipher_text, shift):
 
     for ch in cipher_text:
         if ch not in ALPHA:
-            cipher_text += ch
+            plain_text += ch
             continue
 
         plain_text += ALPHA[(ALPHA.index(ch) - shift) % 26]
