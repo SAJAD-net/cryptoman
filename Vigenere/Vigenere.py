@@ -41,21 +41,19 @@ def decrypt(cipher_text, key):
 if __name__ == "__main__":
     import argparse
 
-    parser = argparse.ArgumentParser(description = "Vigenere encryption and decryption.")
-    parser.add_argument('-e', '--encrypt', help = "To encrypt")
-    parser.add_argument('-d', '--decrypt', help = "To decrypt")
-    parser.add_argument('-k', '--key', help = "Key")
+    parser = argparse.ArgumentParser(description="Vigenere encryption and decryption.")
+    parser.add_argument('-e', '--encrypt', help="To encrypt")
+    parser.add_argument('-d', '--decrypt', help="To decrypt")
+    parser.add_argument('-k', '--key', help="Key")
 
     args = parser.parse_args()
 
-    if key:=args.key.lower():
-        if plain_text:=args.encrypt:
-            print("encrypt")
-            encrypt(plain_text.lower(), key)
+    if key := args.key:
+        if plain_text := args.encrypt:
+            encrypt(plain_text.lower(), key.lower())
 
-        elif cipher_text:=args.decrypt:
-            print("decrypt")
-            decrypt(cipher_text.lower(), key)
+        elif cipher_text := args.decrypt:
+            decrypt(cipher_text.lower(), key.lower())
 
         else:
             parser.print_help()
