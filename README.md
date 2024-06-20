@@ -29,3 +29,7 @@ Baconian ciphers are categorized as both a substitution cipher (in plain code) a
 [To read more (Wikipedia)](https://en.wikipedia.org/wiki/Bacon%27s_cipher)
 
 
+## Rot13
+ROT13 cipher(read as – “rotate by 13 places”) is a special case of the Ceaser cipher in which the shift is always 13.</br>
+So every letter is shifted 13 places to encrypt or to decrypt the message.</br>
+[To read more (Wikipedia)](https://en.wikipedia.org/wiki/ROT13)
